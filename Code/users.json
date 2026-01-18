@@ -1,0 +1,47 @@
+{
+    "Coco": {
+        "password": "Hulk123",
+        "color": "green",
+        "active": true
+    },
+    "Martin": {
+        "password": "RockKing123",
+        "color": "cornflowerblue",
+        "active": true
+    },
+    "Jane": {
+        "password": "BigJ123",
+        "color": "darkcyan",
+        "active": true
+    },
+    "Beto": {
+        "password": "Betaso123",
+        "color": "darkorange",
+        "active": true
+    },
+    "Vari": {
+        "password": "Latina123",
+        "color": "orchid",
+        "active": true
+    },
+    "Fer": {
+        "password": "Latino123",
+        "color": "maroon",
+        "active": true
+    },
+    "AK": {
+        "password": "Coder123",
+        "color": "crimson",
+        "active": true
+    },
+    "Hank": {
+        "password": "Hank123",
+        "color": "rosybrown",
+        "active": true
+    },
+    "Pesa": {
+        "password": "Pesa123",
+        "color": "teal",
+        "active": true
+    }
+}

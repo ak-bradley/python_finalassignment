@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Seven Wonders",
+        "artist": "Fleetwood Mac",
+        "genre": "Classic Rock",
+        "decade": "70ties",
+        "notes": "",
+        "user": "AK",
+        "color": "crimson"
+    },
+    {
+        "title": "Ghost Riders in the Sky",
+        "artist": "The Shadows",
+        "genre": "Instrumental",
+        "decade": "60ties",
+        "notes": "",
+        "user": "AK",
+        "color": "crimson"
+    },
+    {
+        "title": "Here Without You",
+        "artist": "Three Doors Down",
+        "genre": "Modern",
+        "decade": "2000s",
+        "notes": "",
+        "user": "AK",
+        "color": "crimson"
+    },
+    {
+        "title": "Lithium",
+        "artist": "Nirvana",
+        "genre": "Grunge",
+        "decade": "90ties",
+        "notes": "",
+        "user": "AK",
+        "color": "crimson"
+    },
+    {
+        "title": "One Step Into Paradise",
+        "artist": "Pink Cream 69",
+        "genre": "Hard Rock",
+        "decade": "80ties",
+        "notes": "",
+        "user": "Martin",
+        "color": "cornflowerblue"
+    },
+    {
+        "title": "WET",
+        "artist": "Big Boys Don't Cry",
+        "genre": "Hard Rock",
+        "decade": "2000s",
+        "notes": "",
+        "user": "Martin",
+        "color": "cornflowerblue"
+    },
+    {
+        "title": "De Musica Ligera",
+        "artist": "Soda Stereo",
+        "genre": "Latino Rock",
+        "decade": "90ties",
+        "notes": "",
+        "user": "Fer",
+        "color": "maroon"
+    }
+]

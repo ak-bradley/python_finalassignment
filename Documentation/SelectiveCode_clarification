@@ -18,6 +18,7 @@ name: {
 "color": u.color,
 "active": u.active}
 
+
 This piece of code loops through each name in user dictionary and builds an inner dictionary with each user’s variables as values so data (key) is a dictionary of dictionaries, that looks like this:
 
 data = {

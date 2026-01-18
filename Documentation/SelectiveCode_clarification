@@ -1,0 +1,50 @@
+1. CLARIFICATION ON SELECTIVE CODE, NOT PROVIDED IN LINE COMMENTS
+
+Import:
+
+messagebox- provides sleek GUI feature that signal some type of short message being conveyed in a pop-up box like error, yes/no, warning etc.
+simpledialog- provides pop-ups prompting the user to enter input like passwords, numbers etc.
+ttk- more advanced version of tk, nearly indispensable for handling more advanced GUI features like comboboxes and frames. Makes GUI more manageable.
+json- saves and loads data. Turns code into a file
+os- interacts with the OS on behalf of json, checks if the files exist, creates them if they don’t
+
+Logic clarification 
+
+Line 12:
+def save_users():   
+data = {
+name: {
+"password": u.password,
+"color": u.color,
+"active": u.active}
+
+This piece of code loops through each name in user dictionary and builds an inner dictionary with each user’s variables as values so data (key) is a dictionary of dictionaries, that looks like this:
+
+data = {
+    "Coco": {"password": "Hulk123", "color": "green", "active": True},
+    "Martin": {"password": "RockKing123", "color": "cornflowerblue","active": True} etc}
+
+Line 85:
+def get_available_colors():
+taken = {u.color for u in users.values()}
+return [c for c in available_colors if c not in taken]
+
+This function was created as a response to buggy handling of color assignment, since the initial code was still assigning the same colors to multiple users. The function goes through each color assigned to users in the users dictionary compares those colors with those defined in the available colors list and returns those that don't get back as duplicates.
+
+3. Line120:
+btn = tk.Button(container, text= f"{username} ({status})", width=30, command=lambda u=username: self.ask_psswd(u))
+
+Initial code: btn = tk.Button(container, text= f"{username} ({status})", width=30, command=self.ask_psswd(username)  → returns nonsense. The password prompt gets called before the users list is displayed, returning the user name after entering password. Logically, you need to allow for the system to load clickable users list first. Only then you can invoke password prompt.
+command=lambda “delays” the password prompt until the user list gets loaded and the prompt gets invoked by clicking on a user name. 
+
+Similarly, in line 400 ttk.Button(self, text="View by Decade", width=30, command: self.show_catalogue("decade")).pack(pady=5)   returns decade results together with the “VIEW” buttons.
+Hence lambda added: tk.Button(self, text="View by Decade", width=30, command= lambda:     self.show_catalogue("Decade")).pack(pady=5)   to load the decade info separately from the function features
+
+4. Line 408
+if view == "Decade":
+catalogue = {decade: [] for decade in decades}
+for song in songs:
+if song["decade"] in catalogue:
+catalogue[song["decade"]].append(song)
+
+Crates an empty array for all values in decades list, then loops through the songs list, checks which songs has been attributed decade (which are all songs because decade not optional with new song entry) and if the decade of the song matches with the decade in catalogue=decade list, it appends the song to the catalogue.
